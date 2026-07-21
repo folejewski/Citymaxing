@@ -8,7 +8,10 @@ import {
   RecommendedPlace,
 } from "@/lib/recommendations/types";
 
-const MODEL = "gemini-2.5-flash";
+// Alias, not a pinned version — Google periodically retires specific model
+// versions for new API keys, so pin-by-version broke here already. The
+// "-latest" alias always resolves to Google's current recommended flash model.
+const MODEL = "gemini-flash-latest";
 const RESULT_COUNT = 5;
 
 interface LlmSelection {
